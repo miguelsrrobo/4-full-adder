@@ -1,0 +1,121 @@
+|full_adder_4bit
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+c_in => c_in.IN1
+sum[0] << full_adder:U00.sum
+sum[1] << full_adder:U01.sum
+sum[2] << full_adder:U10.sum
+sum[3] << full_adder:U11.sum
+carry_out << full_adder:U11.carry
+
+
+|full_adder_4bit|full_adder:U00
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:HA2.port2
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder_4bit|full_adder:U00|half_adder:HA1
+a => saida_da_soma.IN0
+a => saida_do_carry.IN0
+b => saida_da_soma.IN1
+b => saida_do_carry.IN1
+sum <= saida_da_soma.DB_MAX_OUTPUT_PORT_TYPE
+carry <= saida_do_carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder_4bit|full_adder:U00|half_adder:HA2
+a => saida_da_soma.IN0
+a => saida_do_carry.IN0
+b => saida_da_soma.IN1
+b => saida_do_carry.IN1
+sum <= saida_da_soma.DB_MAX_OUTPUT_PORT_TYPE
+carry <= saida_do_carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder_4bit|full_adder:U01
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:HA2.port2
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder_4bit|full_adder:U01|half_adder:HA1
+a => saida_da_soma.IN0
+a => saida_do_carry.IN0
+b => saida_da_soma.IN1
+b => saida_do_carry.IN1
+sum <= saida_da_soma.DB_MAX_OUTPUT_PORT_TYPE
+carry <= saida_do_carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder_4bit|full_adder:U01|half_adder:HA2
+a => saida_da_soma.IN0
+a => saida_do_carry.IN0
+b => saida_da_soma.IN1
+b => saida_do_carry.IN1
+sum <= saida_da_soma.DB_MAX_OUTPUT_PORT_TYPE
+carry <= saida_do_carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder_4bit|full_adder:U10
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:HA2.port2
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder_4bit|full_adder:U10|half_adder:HA1
+a => saida_da_soma.IN0
+a => saida_do_carry.IN0
+b => saida_da_soma.IN1
+b => saida_do_carry.IN1
+sum <= saida_da_soma.DB_MAX_OUTPUT_PORT_TYPE
+carry <= saida_do_carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder_4bit|full_adder:U10|half_adder:HA2
+a => saida_da_soma.IN0
+a => saida_do_carry.IN0
+b => saida_da_soma.IN1
+b => saida_do_carry.IN1
+sum <= saida_da_soma.DB_MAX_OUTPUT_PORT_TYPE
+carry <= saida_do_carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder_4bit|full_adder:U11
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_adder:HA2.port2
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder_4bit|full_adder:U11|half_adder:HA1
+a => saida_da_soma.IN0
+a => saida_do_carry.IN0
+b => saida_da_soma.IN1
+b => saida_do_carry.IN1
+sum <= saida_da_soma.DB_MAX_OUTPUT_PORT_TYPE
+carry <= saida_do_carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder_4bit|full_adder:U11|half_adder:HA2
+a => saida_da_soma.IN0
+a => saida_do_carry.IN0
+b => saida_da_soma.IN1
+b => saida_do_carry.IN1
+sum <= saida_da_soma.DB_MAX_OUTPUT_PORT_TYPE
+carry <= saida_do_carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
